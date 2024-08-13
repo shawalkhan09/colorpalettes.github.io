@@ -1,0 +1,196 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f39c12;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+}
+
+/* Color Generator Section Styles */
+
+#color-generator {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 21px auto; /* Center the section with auto margins */
+    max-width: 90%; /* Use a percentage for responsiveness */
+}
+
+.color-generator-header {
+    text-align: center; /* Center the header text */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em; /* Larger font size for the header */
+    color: var(--primary-color); /* Text color */
+}
+
+.color-scheme-controls {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+    margin-bottom: 20px;
+}
+
+.color-scheme-controls label {
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below the label */
+    color: #555; /* Medium gray color */
+}
+
+#color-scheme {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%; /* Full width */
+    max-width: 300px; /* Limit width */
+    transition: border-color 0.3s;
+}
+
+#color-scheme:hover, #color-scheme:focus {
+    border-color: var(--primary-color); /* Change border color on hover/focus */
+    outline: none;
+}
+
+#generate-palette {
+    background-color: var(--primary-color); /* Primary color */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Space above the button */
+}
+
+#generate-palette:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Colors Container Styles */
+#colors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+}
+
+/* Color Box Styles */
+.color-box {
+    position: relative; /* Position relative for absolute positioning of the copy button */
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Light gray background for visibility */
+}
+
+.color-display {
+    width: 100%; /* Full width for responsiveness */
+    height: 150px; /* Fixed height for consistency */
+    cursor: pointer;
+    position: relative;
+}
+
+.copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #555; /* Medium gray color */
+    transition: color 0.3s ease;
+}
+
+.copy-button:hover {
+    color: #3498db; /* Blue color on hover */
+}
+
+.copy-palette-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: var(--primary-color); /* Primary color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.copy-palette-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.copy-palette-button:active {
+    background-color: #3e8e41; /* Darker green on active */
+}
+
+/* Color Info Styles */
+.color-info {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center align items vertically */
+    padding: 10px;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+.color-code {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #color-generator {
+        margin: 21px 10px; /* Reduce side margins on smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Smaller header size on mobile */
+    }
+
+    .color-scheme-controls {
+        margin-bottom: 15px; /* Reduce margin */
+    }
+
+    #color-scheme {
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+
+    .copy-palette-button {
+        width: 100%; /* Full width for buttons on mobile */
+        padding: 12px; /* Slightly larger padding */
+    }
+
+    .color-info {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em; /* Further reduce header size */
+    }
+
+    .color-scheme-controls label {
+        font-size: 0.9em; /* Smaller font for labels */
+    }
+
+    .color-code {
+        font-size: 12px; /* Smaller font for color codes */
+    }
+
+    .copy-button {
+        font-size: 16px; /* Smaller icon size */
+    }
+
+    .color-display {
+        height: 120px; /* Reduce height for smaller screens */
+    }
+}

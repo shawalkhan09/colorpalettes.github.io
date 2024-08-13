@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <meta name="description" content="Discover a comprehensive collection of tools for designers and developers. From color palettes to code editors, find everything you need to streamline your workflow.">
+    <meta name="keywords" content="design tools, development tools, web design, color palette, code editor">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <main>
+            <!-- color generator section -->
+            <section id="color-generator">
+                <div class="color-generator-header">
+                    <h2>Color Generator</h2>
+                </div>
+                <div class="color-scheme-controls">
+                    <label for="color-scheme">Select Color Scheme:</label>
+                    <select id="color-scheme">
+                        <option value="random">Random</option>
+                        <option value="monochromatic">Monochromatic</option>
+                        <option value="complementary">Complementary</option>
+                        <option value="triadic">Triadic</option>
+                        <option value="analogous">Analogous</option>
+                    </select>
+                    <button id="generate-palette">Generate Palette</button>
+                </div>
+                <div id="colors-container" class="colors-container">
+                    <!-- Color boxes will be dynamically generated here -->
+                </div>
+                <button id="copy-palette" class="copy-palette-button">Copy Palette</button>
+            </section>
+    </main>
+     <script src="script.js"></script>
+</body>
+</html>
